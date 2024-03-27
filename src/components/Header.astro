@@ -1,26 +1,32 @@
 <section>
   <div class="row">
-    <div class="col-lg-6 col-12">
+    <div class="col-lg-4 col-12">
       <div class="contenedor-texto container">
-        <img src="cukerlank.png" class="logo" alt="" />
-        <p>
-          Mi Dulceria es una pasteleria familiar ,operada por amigos y
-          familiares desde 1989, causantes de los mejores pasteles y galletas de
-          la zona
-        </p>
+        <img src="/logoblanco.png" class="logo" alt="" />
+       
       </div>
     </div>
-    <div class="col-lg-6 col-sm-12">
+    <div class="col-lg-4 col-sm-12">
       <img src="/cupcakes.png" class="torta" alt="" />
+
+
+     
     </div>
     <div class="contenedor-cupcake1">
-      <img src="poque.png" alt="" />
-    </div>
-    <div class="contenedor-cupcake cupcake2">
-      <img src="CUPCAKE2.png" alt="" />
-    </div>
-    <div class="contenedor-cupcake cupcake3">
-      <img src="CUPCAKE2.png" alt="" />
+        <img src="poque.png" alt="" />
+      </div>
+      <div class="contenedor-cupcake cupcake2">
+        <img src="CUPCAKE2.png" alt="" />
+      </div>
+      <div class="contenedor-cupcake cupcake3">
+        <img src="CUPCAKE2.png" alt="" />
+      </div>
+    <div class="col-lg-4">
+        <p>
+            Mi Dulceria es una pasteleria familiar ,operada por amigos y
+            familiares desde 1989, causantes de los mejores pasteles y galletas de
+            la zona
+          </p>
     </div>
   </div>
 </section>
@@ -28,17 +34,18 @@
 <style>
   .logo {
     width: auto;
-    height: 300px;
-    margin-left: 25%;
-    margin-top: -8%;
+    height: 350px;
+    margin-left: 20%;
+    margin-top: 10%;
   }
+  
   .cupcake2 {
     position: absolute;
   }
   .contenedor-cupcake1 {
     position: absolute;
     margin-top: 7%;
-    margin-left: 75%;
+    margin-left: 58%;
 
 
 
@@ -48,6 +55,7 @@
   .contenedor-cupcake{
     width: 0px;
     height:0px;
+    
   }
   .contenedor-cupcake1 {
     position: absolute; /* Posición absoluta para colocarla encima de .col-lg-6 */
@@ -68,12 +76,12 @@
     animation: rotar 4s forwards infinite alternate-reverse;
   }
   .cupcake2 {
-    margin-left: 70%;
+    margin-left: 53%;
     margin-top: 11.5%;
   }
   .cupcake3 {
     position: absolute;
-    margin-left: 62%;
+    margin-left: 45%;
     margin-top: 11.5%;
   }
   .cupcake3 img {
@@ -122,8 +130,9 @@
   p {
     text-align: center;
     text-wrap: balance;
-    font-size: 1.4rem;
-    margin-top: 0px;
+    font-size: 1.5rem;
+    width: 80%;
+    margin-top: 35%;
     font-family:
       system-ui,
       -apple-system,
@@ -136,6 +145,7 @@
       "Open Sans",
       "Helvetica Neue",
       sans-serif;
+      font-style: italic;
   }
   .contenedor-texto {
     margin-top: 100px;
@@ -167,18 +177,22 @@
       display: flex;
     }
     .contenedor-cupcake1 {
-      margin-top: 60%;
+      margin-top: 72%;
       margin-left: 45%;
     }
     .cupcake2{
-        margin-top: 64%;
+        margin-top: 77%;
         margin-left: 55%;
     }
     .cupcake3{
-        margin-top: 64%;
+        margin-top: 77%;
         margin-left: 40%;
     }
-
+    p{
+        margin-top: -5%;
+        text-align: center;
+        text-wrap: balance;
+    }
 
     @keyframes rotarCupcake3 {
     0% {
@@ -224,14 +238,14 @@
         margin-top: -100px;
     }
     .contenedor-cupcake1{
-        margin-top: 135%;
+        margin-top: 100%;
     }
     .cupcake2{
-        margin-top: 165%;
+        margin-top: 133%;
         margin-left: 60%;
     }
     .cupcake3{
-        margin-top: 165%;
+        margin-top: 133%;
         margin-left: 30%;
     }
     .torta{
@@ -240,6 +254,11 @@
     .logo{
         display: flex;
         margin: 0 auto;
+    }
+    p{
+        margin-top: -15%;
+        text-align: center;
+        text-wrap: balance;
     }
   }
 
