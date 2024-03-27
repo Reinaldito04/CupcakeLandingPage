@@ -1,0 +1,237 @@
+<section>
+  <div class="row">
+    <div class="col-lg-6 col-12">
+      <div class="contenedor-texto container">
+        <img src="cukerlank.png" class="logo" alt="" />
+        <p>
+          Mi Dulceria es una pasteleria familiar ,operada por amigos y
+          familiares desde 1989, causantes de los mejores pasteles y galletas de
+          la zona
+        </p>
+      </div>
+    </div>
+    <div class="col-lg-6 col-sm-12">
+      <img src="/cupcakes.png" class="torta" alt="" />
+    </div>
+    <div class="contenedor-cupcake1">
+      <img src="poque.png" alt="" />
+    </div>
+    <div class="contenedor-cupcake cupcake2">
+      <img src="CUPCAKE2.png" alt="" />
+    </div>
+    <div class="contenedor-cupcake cupcake3">
+      <img src="CUPCAKE2.png" alt="" />
+    </div>
+  </div>
+</section>
+
+<style>
+  .logo {
+    width: auto;
+    height: 300px;
+    margin-left: 25%;
+    margin-top: -8%;
+  }
+  .cupcake2 {
+    position: absolute;
+  }
+  .contenedor-cupcake1 {
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 75%;
+  }
+  .contenedor-cupcake1 {
+    position: absolute; /* Posición absoluta para colocarla encima de .col-lg-6 */
+    top: 0; /* Ajustar según sea necesario para la posición vertical */
+    left: 0; /* Ajustar según sea necesario para la posición horizontal */
+    z-index: 1; /* Asegurarse de que esté por encima de la imagen de cupcakes */
+  }
+  .cupcake2 img,
+  .cupcake3 img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .contenedor-cupcake1 img {
+    width: 80px;
+    height: 80px;
+
+    animation: rotar 4s forwards infinite alternate-reverse;
+  }
+  .cupcake2 {
+    margin-left: 70%;
+    margin-top: 11.5%;
+  }
+  .cupcake3 {
+    position: absolute;
+    margin-left: 62%;
+    margin-top: 11.5%;
+  }
+  .cupcake3 img {
+    animation: rotarCupcake3 4s infinite forwards alternate-reverse;
+  }
+  @keyframes rotarCupcake3 {
+    0% {
+      transform: translateX(0px) translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-50px) translateY(40px) rotate(-20deg);
+    }
+    100% {
+      transform: translateX(-100px) translateY(80px) rotate(-40deg);
+    }
+  }
+
+  .cupcake2 img {
+    margin-left: -50px;
+    animation: rotarCupcake2 4s infinite forwards alternate-reverse;
+  }
+  @keyframes rotarCupcake2 {
+    0% {
+      transform: translateX(0px) translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(50px) translateY(40px) rotate(20deg);
+    }
+    100% {
+      transform: translateX(100px) translateY(80px) rotate(40deg);
+    }
+  }
+
+  @keyframes rotar {
+    0% {
+      transform: translateX(-0px) translateY(0) rotate(20deg);
+    }
+    50% {
+      transform: translateX(-155px) translateY(-72px) rotate(0); /* Cambiado a 180 grados y -120px para la mitad de la rotación y movimiento */
+    }
+    100% {
+      transform: translateX(-300px) translateY(0px) rotate(-20deg);
+    }
+  }
+
+  p {
+    text-align: center;
+    text-wrap: balance;
+    font-size: 1.4rem;
+    margin-top: 0px;
+    font-family:
+      system-ui,
+      -apple-system,
+      BlinkMacSystemFont,
+      "Segoe UI",
+      Roboto,
+      Oxygen,
+      Ubuntu,
+      Cantarell,
+      "Open Sans",
+      "Helvetica Neue",
+      sans-serif;
+  }
+  .contenedor-texto {
+    margin-top: 100px;
+  }
+
+  h2 {
+    font-family: cursive;
+    font-size: 2.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: italic;
+  }
+  img {
+    width: 500px;
+    height: 500px;
+    margin-top: 50px;
+  }
+  section {
+    background-color: #f2a7b5;
+    height: auto;
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .torta {
+      margin: 0 auto;
+      height: 400px;
+      display: flex;
+    }
+    .contenedor-cupcake1 {
+      margin-top: 60%;
+      margin-left: 45%;
+    }
+    .cupcake2{
+        margin-top: 64%;
+        margin-left: 55%;
+    }
+    .cupcake3{
+        margin-top: 64%;
+        margin-left: 40%;
+    }
+
+
+    @keyframes rotarCupcake3 {
+    0% {
+      transform: translateX(0px) translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(-100px) translateY(50px) rotate(20deg);
+    }
+    100% {
+      transform: translateX(0px) translateY(0) rotate(0deg);
+    }
+  }
+
+
+    @keyframes rotarCupcake2 {
+    0% {
+      transform: translateX(0px) translateY(0) rotate(0deg);
+    }
+    50% {
+      transform: translateX(100px) translateY(50px) rotate(20deg);
+    }
+    100% {
+      transform: translateX(0) translateY(0) rotate(0deg);
+    }
+  }
+
+
+    @keyframes rotar {
+      0% {
+        transform: translateX(60px) translateY(0) rotate(0);
+      }
+      50% {
+        transform: translateX(0) translateY(-72px) rotate(0); /* Cambiado a 180 grados y -120px para la mitad de la rotación y movimiento */
+      }
+      100% {
+        transform: translateX(-60px) translateY(0px) rotate(-20deg);
+      }
+    }
+  }
+
+  @media screen and (max-width: 390px){
+    .row{
+        margin-top: -100px;
+    }
+    .contenedor-cupcake1{
+        margin-top: 135%;
+    }
+    .cupcake2{
+        margin-top: 165%;
+        margin-left: 60%;
+    }
+    .cupcake3{
+        margin-top: 165%;
+        margin-left: 30%;
+    }
+    .torta{
+        margin-left: -50px;
+    }
+    .logo{
+        display: flex;
+        margin: 0 auto;
+    }
+  }
+
+
+  
+</style>

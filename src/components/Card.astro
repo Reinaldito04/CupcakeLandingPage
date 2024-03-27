@@ -2,60 +2,147 @@
 interface Props {
 	title: string;
 	body: string;
-	href: string;
+	img :string;
 }
 
-const { href, title, body } = Astro.props;
+
+
+
+const {  title, body,img } = Astro.props;
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
+
+	<div class="container-card"  >
+		<div class="container-img">
+		  <img src={img} alt="" />
+		</div>
+		<div class="contenedor-texto">
+		  <h5>{title}</h5>
+		  <p>{body}</p>
+		</div>
+		<div class="more-info">
+		  <h4 class="text-center">5$</h4>
+		  <div class="container text-center">
+			<button class="btn btn-pink">Comprar</button>
+		  </div>
+		</div>
+	  </div>
+
+
 <style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 1px;
-		background-color: #23262d;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 7px;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
-	}
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: calc(1.5rem - 1px);
-		border-radius: 8px;
-		color: white;
-		background-color: #23262d;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent-light));
-	}
+	
+.btn-pink{
+	background-color: pink;
+}
+h5{
+	text-align: center;
+}
+p {
+    text-align: center;
+    font-weight: bolder;
+  }
+  .container-card {
+    margin: 10px;
+    border-radius: 8px; /* Bordes redondeados */
+    overflow: hidden; /* Evita que el contenido desborde */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    transition: transform 0.3s ease; /* Transición suave al hacer hover */
+    transition:
+      padding-bottom 0.2s,
+      z-index 0.3s;
+    max-width: 300px; /* Ancho máximo de la tarjeta */
+    position: relative;
+  }
+
+  .container-card:hover {
+    transform: translateY(-10px); /* Efecto de levantamiento al hacer hover */
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra suave */
+	height: 500px;
+	transition: height 0.4s ease;
+  }
+  .container-card:not(:hover) {
+  height: 400px;
+  transition: height 0.4s ease;
+}
+  .container-img img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin: 0 auto;
+    
+  }
+.container-img{
+  height: 300px;
+}
+  .contenedor-texto {
+    padding: 20px; /* Espaciado interno */
+    background-color: #F2A7B5; /* Color de fondo */
+	transition: all 0.2s ease;
+	position: relative; /* Necesario para el posicionamiento absoluto del goteo */
+    overflow: hidden; /* Ocultar parte del contenido que sobresale */
+}
+.container-card:hover .contenedor-texto{
+	background-color: transparent;
+	background-image: url("./gotas4.png");
+	background-position: -14px;
+	background-repeat: no-repeat;
+	background-clip: border-box;
+	transition: all 0.5s ease;
+	background-size: cover;
+	background-position-y: -15px;
+	border-radius: 25px;
+	
+	padding: 40px;
+
+	transition: background-color 0.5s ease, padding 0.5s ease; /* Transiciones adicionales */
+	animation-name: moveBackgroundPosition; /* Nombre de la animación */
+    animation-duration: 0.8s; /* Duración de la animación */
+    animation-timing-function: linear; /* Función de temporización */
+    animation-iteration-count: infinite;
+    
+
+}
+@keyframes moveBackgroundPosition {
+    0% {
+        background-position: -10px; /* Empieza en 20% */
+    }
+    50% {
+        background-position: -20px; /* Cambia a 40% a mitad de camino */
+    }
+    100% {
+        background-position: -10px; /* Vuelve a 20% al final */
+    }
+}
+
+  .contenedor-texto h5 {
+    margin-top: 0; /* Elimina el margen superior predeterminado */
+    margin-bottom: 10px; /* Espacio entre el título y el párrafo */
+  }
+
+  .contenedor-texto p {
+    margin: 0; /* Elimina los márgenes predeterminados */
+  }
+  .more-info {
+    position: absolute; /* Posiciona el contenido adicional */
+    bottom: -100%; /* Lo oculta inicialmente */
+    left: 0;
+    width: 100%;
+    background-color: rgba(
+      255,
+      255,
+      255,
+      0.9
+    ); /* Color de fondo semi-transparente */
+    padding: 10px;
+    transition:
+      bottom 0.3s ease,
+      transform 0.3s ease; /* Transición suave para la posición y la escala */
+    transform: scaleY(0); /* Oculta el contenido adicional */
+    transform-origin: bottom; /* Define el origen de la transformación */
+  }
+
+  .container-card:hover .more-info {
+    bottom: 0; /* Muestra el contenido adicional al hacer hover */
+    transform: scaleY(1); /* Escala el contenido adicional */
+  }
 </style>
+

@@ -1,0 +1,61 @@
+<section class="revelar2">
+  <div class="container-fluid">
+    <div class="row contenedor-principal">
+      <div class="col-md-12 col-lg-4 col-12 col-sm-12">
+        <img src="/galletas.png"  class="primeragalleta" alt="" />
+      </div>
+      <div class="col-md-12  col-lg-4 col-12 col-sm-12">
+       <h2 class="text-muted">La mejor Pasteleria
+        Lorem ipsum dolor sit amet.
+       </h2>
+      </div>
+      <div class="col-md-12 col-lg-4 col-12 col-sm-12">
+        <img src="/galletas.png" class="segundagalleta" alt="" />
+      </div>
+    </div>
+  </div>
+</section>
+<style>
+    .contenedor-principal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center
+    }
+    h2{
+        text-align: center;
+        font-size: 1.8rem;
+        margin: 0 auto;
+    }
+    img{   
+        width: auto;
+        height: 200px;
+    }
+    .primeragalleta{
+        height: 150px;
+        margin-left: -50px;
+    }
+    .segundagalleta{
+        height: 150px;
+        transform: scaleX(-1);
+    }
+
+    @media screen and (max-width: 768px){
+      img{
+        height: 250px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right:  -20%;
+      }
+
+      .contenedor-principal{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+      }
+      
+    }
+</style>

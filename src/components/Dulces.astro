@@ -1,0 +1,188 @@
+<section>
+  <div class="container revelar">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <div class="container contenedor-text">
+          <h4>Los Mejores Cupcakes</h4>
+          <p>Precio $$$</p>
+          <div class="container">
+            <button class="btn btn-primary">Comprar</button>
+          </div>
+        </div>
+        <div class="container contenedor-ponque">
+          <div>
+            <img src="cremita.png" alt="" class="cremita" />
+          </div>
+          <div>
+            <img src="masa.png" alt="" class="masa" />
+          </div>
+          <div>
+            <img src="fundita.png" alt="" class="fundita" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-12">
+        <div class="container contenedor-text contenedortexto2">
+          <h4>Tortas de varios sabores</h4>
+          <p>Precio $$$</p>
+          <div class="container">
+            <button class="btn btn-primary botonsegundo">Comprar</button>
+          </div>
+        </div>
+        <div class="container contenedor-torta">
+          <img src="tortas.png" alt="" class="torta" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const contenedorPonque = document.querySelector('.contenedor-ponque');
+
+  contenedorPonque.addEventListener('mouseover', function() {
+    const imagenes = document.querySelectorAll('.contenedor-ponque img');
+
+    imagenes.forEach(function(img) {
+      const elementoHtml = img as HTMLElement; // Castear a HTMLElement
+      if (img.classList.contains('cremita')) {
+        elementoHtml.style.transform = 'translateY(-60px)';
+      } else if (img.classList.contains('masa')) {
+        elementoHtml.style.transform = 'translateY(-30px)';
+      } else if (img.classList.contains('fundita')) {
+        elementoHtml.style.transform = 'translateY(-10px)';
+      }
+    });
+  });
+
+  contenedorPonque.addEventListener('mouseout', function() {
+    const imagenes = document.querySelectorAll('.contenedor-ponque img');
+
+    imagenes.forEach(function(img) {
+      const elementoHtml = img as HTMLElement; // Castear a HTMLElement
+      elementoHtml.style.transform = 'none';
+     
+    });
+  });
+});
+</script>
+<style>
+    
+
+  .masa {
+    transition: transform 1.5s ease ;
+    height: 52px;
+    margin-top: -40px;
+  }
+  .fundita{
+    margin-top: -35px;
+    height: 125px;
+    margin-left: -10px;
+    transition: transform 1.5s ease;
+  }
+  .contenedor-ponque {
+    margin-left: 50%;
+  }
+ 
+  .cremita {
+    transition: transform 1.5s ease;
+    height: 150px;
+  }
+  button {
+    padding: 12px 16px;
+    background-color: pink;
+    outline: none;
+    border: none;
+  }
+  button:hover {
+    background-color: rgb(197, 172, 176);
+  }
+  .botonsegundo {
+    background-color: rgb(0, 140, 255);
+  }
+  .botonsegundo:hover {
+    background-color: rgb(40, 126, 167);
+  }
+  .contenedor-torta {
+    margin-top: -120px;
+    margin-left: 300px;
+  }
+  .torta {
+    height: 400px;
+  }
+  p {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 1.5rem;
+  }
+  .contenedor-text {
+    margin-top: 20%;
+  }
+  .contenedor-chupeta {
+    margin-top: -50px;
+    margin-left: 100px;
+  }
+  .chupeta {
+    width: 500px;
+    height: auto;
+  }
+  section {
+    overflow: hidden;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80dvh;
+    overflow-x: hidden;
+    
+    background-position: center;
+    background-image: url("./superficie.png");
+  }
+  @media screen and (max-width: 768px){
+    section{
+      height: 80dvh;
+      background-position: center;
+    }
+    .contenedor-ponque{
+      margin-left: -10%;
+      margin-top: 10%;
+    }
+    .contenedor-torta{
+      margin-left: -10%;
+     
+      margin-top:   -5%;
+    }
+    .contenedor-torta img{
+      height: 350px;
+    }
+  }
+  @media screen and (max-width: 390px){
+    section{
+      background-image: url("/superficiemovil.png");
+      height: auto;
+    }
+    .contenedor-text{
+      margin-top: 40px;
+    }
+    .contenedor-ponque{
+      margin-top: 10px;
+      margin-left: 2px;
+    }
+  .cremita{
+    height: 100px;
+  }
+  .masa{
+    height: 35px;
+  }
+  .fundita{
+    height: 90px;
+  }
+  .contenedortexto2{
+    margin-top: 200px;
+  }
+  .torta{
+    height: 100px;
+    width: 250px;
+  }
+
+  }
+</style>

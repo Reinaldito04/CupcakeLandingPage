@@ -1,0 +1,95 @@
+<section>
+
+    <div class="container-fluid revelar2" >
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="container contenedor-texto">
+                    <h4 class="text-muted">Mi Dulceria ,Pasteleria Familiar</h4>
+                    <div class="contenedor-parrafo">
+                        <p>Mi Dulceria es una pasteleria familiar ,operada por amigos y familiares desde 1989, causantes de los mejores pasteles y galletas de la zona </p>
+                        
+                    </div>
+                    <div class="contenedor-boton ">
+                        <button>Información</button>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="/galletas.png" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    img{
+        height: 200px;
+        margin-top: 80px;
+    }
+    .contenedor-texto{
+        padding-top: 100px;
+        
+    }
+    h4{
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .contenedor-parrafo{
+        width: 50%;
+        margin: 0 auto;
+    }
+    button{
+        background-color: pink;
+        border: none;
+        padding: 16px 16px;
+        color: white;
+        margin: 0 auto;
+        font-weight: bold;
+
+        margin-left: 200px;
+    }
+    p{
+        text-wrap: pretty;
+        font-size: 1.2rem;
+       
+    }
+    section{
+        background-image: url("/products.png");
+        height: 60dvh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    @media screen and (max-width: 768px){
+        section{
+            height: auto;
+            padding-bottom: 100px;
+        }
+        .contenedor-texto{
+            margin-top: -70px;
+        }
+        p{
+            text-wrap: balance;
+            font-size: 18px;
+        }
+        h4{
+            font-size: 20px;
+        }
+        button{
+            padding: 8px;
+            display: flex;
+            margin-left: 40%;
+        }
+    }
+    @media screen and (max-width: 390px){
+        .contenedor-texto{
+            margin-top: 10px;
+        }
+        img{
+            height: 150px;
+            margin-top: -20px;
+        }
+    }
+</style>

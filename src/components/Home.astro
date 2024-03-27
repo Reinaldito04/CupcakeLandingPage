@@ -1,0 +1,83 @@
+<section class="container-fluid ">
+    <h4 class="text-center fs-2">Stocks</h4>
+<div class="container contenedor-elementos">
+    
+
+
+    <div class="contenedor-svg">
+        <img src="cake2.svg" alt=""/>
+        <p>Helado</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="cakes.svg" alt=""/>
+        <p>Cupcake</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="ice.svg" alt=""/>
+        <p>Helado de 3 sabores</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="torta.svg" alt=""/>
+        <p>Torta</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="icecream.svg" alt=""/>
+        <p>Barquilla</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="ice.svg" alt=""/>
+        <p>Helado de 3 sabores</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="torta.svg" alt=""/>
+        <p>Torta</p>
+    </div>
+    <div class="contenedor-svg">
+        <img src="icecream.svg" alt=""/>
+        <p>Barquilla</p>
+    </div>
+
+    
+</div>
+
+</section>
+
+<style>
+    p{
+        text-align: center;
+        margin-top: 5px;
+        font-size: 1.2rem;
+    }
+  
+    .container {
+       
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center; /* Alinear elementos a la izquierda */
+    }
+
+    .contenedor-svg {
+        flex-basis: calc(12% - 10px); /* Establece el ancho del elemento a un cuarto del contenedor, restando márgenes */
+        margin: 5px; /* Espacio entre elementos */
+        text-align: center; /* Centra el contenido horizontalmente */
+        transition: transform 0.5s ease;
+    }
+    .contenedor-svg:hover{
+        transform: translateY(-10px);
+    }
+
+    .contenedor-svg img {
+        max-width: 40%; /* Asegura que la imagen no supere el ancho del contenedor */
+        height: auto; /* Hace que la imagen conserve su proporción */
+    }
+
+    @media screen and (max-width: 390px){
+      .container{
+        flex-wrap: wrap;
+      }
+      p{
+        font-size: 18px;
+        text-wrap: balance;
+      }
+    }
+</style>
