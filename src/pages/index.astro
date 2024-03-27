@@ -13,22 +13,22 @@ import Galletas from "../components/Galletas.astro"
 ---
 
 <Layout title="Welcome to Astro.">
-	<div class="content-wrapper">
+	
 	<Navbar/>
 	<Header/>
 	
-        <Home/>
-        <About/>
+    <Home/>
+	<About/>
         <Products/>
         <Dulces/>
         <Information/>
         <Galletas/>
-    </div>
+ 
 	<Footer/>
 </Layout>
 
 <style is:global>
-	.content-wrapper {
-        overflow-x: hidden;
-    }
+body{
+	overflow-x: hidden;
+}
 </style>
